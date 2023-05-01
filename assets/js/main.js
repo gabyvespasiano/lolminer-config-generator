@@ -51,19 +51,35 @@ function llenarValores() {
   
     // Obtener los inputs y asignarles los valores correspondientes
     coffInputs.forEach((input, index) => {
-        input.value = coffValues[index];
+        if (coffValues[index] == undefined){
+          input.value = "*";
+        }else{
+          input.value = coffValues[index];
+        }        
       });
       
       cclkInputs.forEach((input, index) => {
-        input.value = cclkValues[index];
+        if (cclkValues[index] == undefined){
+          input.value = "*";
+        }else{
+          input.value = cclkValues[index];
+        }     
       });
       
       mclkInputs.forEach((input, index) => {
-        input.value = mclkValues[index];
+        if (mclkValues[index] == undefined){
+          input.value = "*";
+        }else{
+          input.value = mclkValues[index];
+        }     
       });
       
       plInputs.forEach((input, index) => {
-        input.value = plValues[index];
+        if (plValues[index] == undefined){
+          input.value = "*";
+        }else{
+          input.value = plValues[index];
+        }     
       });
   }
   function generateValues() {
